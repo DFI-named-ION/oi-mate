@@ -1,0 +1,12 @@
+body {
+	background-color: dimgray;
+	color: wheat;
+	text-align: center;
+}
+
+h1 {
+	font-style: italic;
+	border: 5px dotted crimson;
+	width: 500px;
+	margin: 24% auto;
+}
