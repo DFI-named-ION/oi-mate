@@ -20,6 +20,12 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+    
+      - name: Lint CSS with Stylelint
+        run: |
+          npm install -g stylelint stylelint-config-standard
+          echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
+          npx stylelint "**/*.css" || true
 
       - name: build
         uses: docker/build-push-action@v4
