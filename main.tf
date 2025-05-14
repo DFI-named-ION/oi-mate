@@ -4,6 +4,13 @@ provider "google" {
   zone        = var.zone
 }
 
+terraform {
+  backend "gcs" {
+    bucket = "cool-lab4-5-terra-state"
+    prefix = "terraform-ci-cd"
+  }
+}
+
 resource "google_compute_firewall" "fw" {
   name    = "allow-http-ssh"
   network = var.network
