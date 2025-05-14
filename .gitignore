@@ -1,0 +1,11 @@
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+.terraform.lock.hcl
+
+cool-lab4-5-5fd225af87cb.json
