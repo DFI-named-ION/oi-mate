@@ -2,7 +2,6 @@ provider "google" {
   project     = var.project
   region      = var.region
   zone        = var.zone
-  credentials = file("${path.module}/cool-lab4-5-5fd225af87cb.json")
 }
 
 resource "google_compute_firewall" "fw" {
