@@ -23,7 +23,7 @@ jobs:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
       - name: Init
-        run: terraform init
+        run: terraform init -reconfigure
 
       - name: Validate
         run: terraform validate
